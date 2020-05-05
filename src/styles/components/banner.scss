@@ -1,0 +1,363 @@
+.banner {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #01263d;
+
+  &__info {
+    color: white;
+    font-size: 24px;
+    line-height: 26px;
+
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+    padding-left: 97px;
+
+    @include r(1219) {
+      padding-left: 0;
+      margin-right: 8px;
+    }
+  }
+
+  &__img {
+    top: -30px;
+    left: 0;
+    position: absolute;
+    margin-right: 8px;
+
+    @include r(1219) {
+      position: static;
+      width: 69px;
+    }
+  }
+
+  &__sale {
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 2.04;
+    letter-spacing: -0.6px;
+    width: 88px;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 88px;
+      height: 67px;
+      background-image: url("../img/sale.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    @include r(1219) {
+      width: 67px;
+
+      &::before {
+        width: 67px;
+      }
+    }
+
+    @include r(1023) {
+      width: 88px;
+      display: none;
+
+      &::before {
+        width: 77px;
+      }
+    }
+
+    @include r(767) {
+      width: 77px;
+    }
+
+    @include r(370) {
+      width: 57px;
+      font-size: 12px;
+
+      &::before {
+        width: 57px;
+      }
+    }
+  }
+
+  &__sale-text {
+    position: relative;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+    @include r(1023) {
+      transform: rotate(-45deg) translateY(-3px) translateX(-3px);
+    }
+
+    @include r(767) {
+      transform: rotate(-45deg) translateY(0) translateX(0);
+    }
+  }
+
+  &__order {
+    margin-right: 24px;
+
+    @include r(1219) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn {
+    padding: 11px 30px;
+    font-size: 20px;
+
+    @include r(1219) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include r(767) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @include r(370) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  .timer {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    text-align: center;
+
+    &__title {
+      margin-right: 0;
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 1.13;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__title,
+    &__separator {
+      color: #ffffff;
+    }
+
+    &__container {
+      align-items: center;
+    }
+
+    @include r(1219) {
+      margin-right: 15px;
+    }
+
+    @include r(767) {
+      margin-right: 0;
+    }
+
+    @include r(639) {
+      display: none;
+    }
+  }
+
+  @include r(1219) {
+    margin-right: 20px;
+  }
+}
+
+.banner-order {
+  display: flex;
+  align-items: center;
+
+  @include r(1023) {
+    margin-right: 0;
+  }
+
+  &__text {
+    max-width: 174px;
+    width: 100%;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    @include r(1219) {
+      font-size: 14px;
+      margin-right: 5px;
+      max-width: 134px;
+    }
+
+    @include r(1023) {
+      margin-right: 0;
+      max-width: 110px;
+    }
+
+    @include r(639) {
+      position: relative;
+      right: 50px;
+    }
+
+    @include r(439) {
+      margin-right: 50px;
+      right: 0;
+    }
+
+    @include r(385) {
+      margin-right: 10px;
+      font-size: 13px;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+
+    @include r(1023) {
+      display: none;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+
+    &--old {
+      position: relative;
+      padding-right: 25px;
+
+      .banner-order__price-name {
+        margin-bottom: 18px;
+      }
+
+      @include r(1219) {
+        padding-right: 10px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #d1d0d0;
+        opacity: 0.3;
+      }
+
+      .banner-order__price-name {
+        opacity: 0.7;
+      }
+
+      .banner-order__price-value {
+        opacity: 0.7;
+        color: #ffffff;
+        font-weight: 400;
+        line-height: 0.9;
+        font-size: 28px;
+
+        @include r(1219) {
+          font-size: 22px;
+        }
+      }
+
+      .x_currency {
+        font-size: 16px;
+      }
+
+      .x_price_previous {
+        position: relative;
+        display: inline-block;
+        letter-spacing: -1.4px;
+
+        &::before,
+        &::after {
+          content: "";
+          background-color: #a8c13f;
+          position: absolute;
+          top: 50%;
+          left: 0px;
+          background-color: #fff;
+          width: 100%;
+          height: 1px;
+        }
+
+        &::before {
+          width: 100%;
+          transform: translateY(-50%) rotate(10deg);
+        }
+
+        &::after {
+          width: 100%;
+          transform: translateY(-50%) rotate(-10deg);
+        }
+      }
+    }
+
+    &--new {
+      padding-left: 23px;
+
+      @include r(1219) {
+        padding-left: 10px;
+      }
+
+      .banner-order__price-value {
+        color: #fd4f00;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 0.9;
+
+        @include r(1219) {
+          font-size: 30px;
+        }
+      }
+
+      .x_currency {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .x_price_current {
+        letter-spacing: -2px;
+      }
+    }
+  }
+
+  &__price-name {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &__price-value {
+    // margin-top: auto;
+  }
+}

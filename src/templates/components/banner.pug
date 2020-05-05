@@ -1,0 +1,27 @@
+.banner
+   .container
+      .banner__content
+         .banner__left
+            img.banner__img(src="img/product.png", alt="Normalife")
+            .banner__sale
+               .banner__sale-text -50%
+         .banner__order.banner-order
+               span.banner__info.text-bold  Только сегодня&nbsp;
+                 span.date-0(data-format="dd month")
+         .timer.nav__timer
+            .timer__title До конца акции
+                br
+                | осталось:
+            .timer__container
+                .timer__box
+                    span.timer__item.hours
+                    span.timer__item.hours
+                .timer__separator :
+                .timer__box
+                    span.timer__item.minutes
+                    span.timer__item.minutes
+                .timer__separator :
+                .timer__box
+                    span.timer__item.seconds
+                    span.timer__item.last.seconds
+         button.btn.banner__btn.ever-popup-btn Заказать звонок

@@ -1,0 +1,363 @@
+.nav {
+  padding: 16px 0;
+  background-color: #01263d;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .timer__title {
+    margin-right: 13px;
+  }
+
+  &__btn {
+    // margin-top: 20px;
+    padding: 10px 0px 8px;
+    // margin-left: auto;
+    // margin-right: auto;
+    @include r(767) {
+      margin-top: 40px;
+    }
+  }
+
+  &__menu {
+    background-color: $main-color;
+    border-radius: 50%;
+    position: fixed;
+    top: 19px;
+    left: 20px;
+    padding: 10px;
+    z-index: 99;
+    display: none;
+
+    &-bg {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &-open {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      display: none;
+      transition: 0.5s;
+      z-index: 101;
+
+      &-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 320px;
+        width: 100%;
+        height: 100vh;
+        background-color: #08324d;
+        padding: 20px;
+      }
+
+      .close {
+        cursor: pointer;
+        position: relative;
+        left: 240px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        transition: all 0.4s;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          top: 10px;
+          border-radius: 5px;
+          background-color: red;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+
+      .nav__list--li svg {
+        width: 40px;
+      }
+
+      .menu-logo {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .nav__list {
+        flex-direction: column;
+
+        li {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    font-family: "OpenSans", sans-serif;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__logo-upper {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ffffff;
+
+    sup {
+      font-size: 10px;
+      vertical-align: super !important;
+    }
+  }
+
+  &__text {
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+
+    svg {
+      path {
+        fill: #e8c652;
+      }
+    }
+
+    &--li {
+      display: flex;
+      align-items: center;
+
+      &.second {
+        a {
+          border-left: 1px solid #d9d9d9;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        color: black;
+        font-weight: 400;
+        padding: 0 40px;
+
+        &:hover {
+          svg {
+            path {
+              fill: $main-color;
+            }
+          }
+
+          p {
+            span {
+              &:after {
+                content: none;
+              }
+            }
+          }
+        }
+
+        p {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 9px;
+
+          span {
+            position: relative;
+
+            &.enter {
+              padding-right: 5px;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 1px;
+              width: 100%;
+              height: 100%;
+              border-bottom: 1px dotted #666666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include r(1219) {
+  .nav {
+    .timer__item {
+      padding: 7px 8px;
+    }
+    &__list {
+      &--li {
+        a {
+          padding: 0 15px;
+
+          p {
+            &.third {
+              width: 120px;
+            }
+
+            span {
+              &.enter {
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include r(1023) {
+  .nav {
+    &__timer {
+      display: none;
+    }
+
+    &__logo {
+      font-size: 30px;
+    }
+
+    .nav__logo-upper {
+      sup {
+        font-size: 14px;
+      }
+    }
+
+    .timer__item {
+      padding: 9px 11px;
+    }
+    &__menu {
+      display: block;
+
+      &-open {
+        &-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          .timer {
+            display: none;
+          }
+
+          .nav__logo {
+            margin-left: 0px !important;
+            margin-bottom: 20px;
+          }
+
+          .nav__list--li.second a {
+            border-left: none;
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    &__logo {
+      margin-left: 0px;
+    }
+
+    &__list {
+      &.desktop {
+        display: none;
+      }
+
+      &--li {
+        a {
+          padding: 0;
+
+          p {
+            &.third {
+              width: auto;
+            }
+
+            span {
+              &.enter {
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include r(900) {
+  .nav__logo {
+    margin-left: 70px;
+  }
+}
+
+@include r(767) {
+  .nav {
+    .container {
+      justify-content: center;
+    }
+    &__logo {
+      margin-left: 0px;
+    }
+    &__menu {
+      &-open {
+        &-content {
+          .timer {
+            display: block;
+            margin-top: 20px;
+
+            &__title {
+              margin-bottom: 7px;
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .timer.desktop,
+    .btn.desktop {
+      display: none;
+    }
+  }
+}
+
+@include r(340) {
+  .nav {
+    &__logo {
+      margin-left: 40px;
+    }
+  }
+}
+
+@include rm(1024) {
+  .nav__menu-open {
+    display: none !important;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .nav__list--li a p span:after {
+    bottom: -1px;
+  }
+}
