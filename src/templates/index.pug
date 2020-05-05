@@ -1,10 +1,10 @@
 extends settings/layout
 
 prepend html
-  - const lang = "ru";
+  - const lang = "th";
 
 prepend head
-  - const pageTitle = "Купить {название товара} недорого. Цены, отзывы. Закажите {название товара} сейчас!";
+  - const pageTitle = "Купить SuperFit недорого. Цены, отзывы. Закажите SuperFit сейчас!";
   - const themeColor = "#ffffff";
 
 append head
@@ -13,9 +13,14 @@ append fonts
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,900&subset=cyrillic,cyrillic-ext")
 
 append content
-  include components/header
-  include components/promo
-  include components/banner
+  //- include components/header
+  //- include components/promo
+  //- include components/popup
+  include components/reviews
+  include components/causes
+  include components/decision
+
+  //- include components/banner
 
 append scripts
   script(src="js/slick.min.js")

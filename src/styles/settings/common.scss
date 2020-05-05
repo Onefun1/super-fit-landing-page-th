@@ -77,6 +77,13 @@ button {
   }
 }
 
+.colored-text {
+  color: #e8c652;
+  &-lg {
+    font-size: 1.2rem;
+  }
+}
+
 .text-bold {
   font-weight: 700;
 }

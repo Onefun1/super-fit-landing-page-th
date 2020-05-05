@@ -1,0 +1,68 @@
+mixin slide(slide)
+  li.slide.reviews__item
+    .slide__photo
+      img.slide__img(src=slide.src, alt="photo")
+    .slide__info
+      p.slide__name!=slide.name
+      p.slide__title!=slide.title
+    .slide__desc.js-comment
+      p.slide__text!=slide.text
+      p.slide__text-more!=slide.more
+    .slide__btn.js-show-comment Подробнее
+
+-
+  const slideArray = [
+    {
+      src: 'img/reviews__foto1.png',
+      name: 'Martin Khoe',
+      title: 'Похудел на 8 кг+ за 3 недели',
+      text: 'Наконец-то это случилось! После 3 недель с SuperFit я скинул более 8 кг. Это вдвое быстрее, чем мне удавалось худеть до этого! <br> <br> Если бы не SuperFit, я бы не достиг желаемой цифры на весах. За 3 недели приема мне удалось легко'
+    },
+        {
+      src: 'img/reviews__foto2.png',
+      name: 'Kate Bardiloni',
+      title: 'Успела скинуть 5 кг к пляжному сезону ',
+      text: 'Впервые я услышала о SuperFit от подруги, когда пыталась похудеть. Должна признаться, что изначально была настроена скептично. Так как до этого уже успела попробовать средства для похудения, но они давали только кратковременный',
+      more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur mollitia consectetur facilis beatae doloribus accusamus, quo quae? Non, labore quam. Aliquam delectus facere culpa. Reiciendis iure ipsum eum? Est, delectus!'
+    },
+        {
+      src: 'img/reviews__foto3.png',
+      name: 'Hanan, Pakistan',
+      title: 'Легко похудела на 1 размер ',
+      text: 'Это средство оценят те, кто длительное время безуспешно пытается похудеть. SuperFit помогает худеть, не ощущая дикого голода и нормализуя работу метаболизма. Самое удивительно для меня было то, что я похудела на 1 размер и все это время чувствовала заряд энергии.',
+      more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur mollitia consectetur facilis beatae doloribus accusamus, quo quae? Non, labore quam. Aliquam delectus facere culpa. Reiciendis iure ipsum eum? Est, delectus!'
+
+    },
+        {
+      src: 'img/reviews__foto4.png',
+      name: 'Chunhua Cho',
+      title: 'Вернулась к прежнему весу после перерыва в спорте',
+      text: 'Я в восторге от путешествия под названием “Похудение” вместе с SuperFit. Он помог мне привести себя в форму, после того как я на пару месяцев закинула тренировки. Наконец-то я могу взвешиваться со спокойной душой. Рассказала о нем уже всем родственникам и друзьям!',
+      more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur mollitia consectetur facilis beatae doloribus accusamus, quo quae? Non, labore quam. Aliquam delectus facere culpa. Reiciendis iure ipsum eum? Est, delectus!'
+    },
+        {
+      src: 'img/reviews__foto5.png',
+      name: ' Lisa Lins',
+      title: 'Результат: 9 кг за 2 месяца',
+      text: 'Я попробовала SuperFit и увидела результат через 2 месяца — 9 кг. Придерживаться жесткой диеты не нужно, но чем сбалансированнее будет ваше питание, тем лучше результат. Кроме того, незаметно для вас уменьшится аппетит. Многие препараты вызывают у меня аллергию, но с в этот раз никаких покраснений и зуда.'
+    },
+        {
+      src: 'img/reviews__foto6.png',
+      name: 'Aimin Chang',
+      title: 'Вернулась к 8 размеру одежды',
+      text: 'Сегодня ровно 6 месяцев с тех пор, как я принимаю SuperFit и наконец-то сново вернулась к 8 размеру одежды. Я была настроена скептически, но после изучения сайта и состава, убедилась что там нет ничего вредного, поэтому в любом случае решила попробовать. Должна сказать, это лучшее мое решение! Я очень довольна результатом. Советую пересмотреть свой рацион питания и добавить физических нагрузок — так результат будет больше. Надеюсь, что моя история вдохновит кого-то на похудение!'
+    }
+  ];
+
+
+
+section.block.reviews
+  .container.reviews__container
+    h2.title.reviews__title Отзывы людей, которые&nbsp;приобрели
+      span.colored-text  SuperFit
+    ul.reviews__list
+      .arrow-prev
+      .arrow-next
+      .slider__container
+        each slide in slideArray
+          +slide(slide)

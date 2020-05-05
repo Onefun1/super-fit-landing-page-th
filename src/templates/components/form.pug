@@ -1,0 +1,30 @@
+.main-form-wrap
+            form.main-form.x_order_form(method="post" action="/submit")
+              .form-sale
+                span.form-sale-discount -50%
+              h3.main-form__title Только сегодня
+                br
+                span.date-0.text-colored(data-format='dd month') 22 октября
+              .main-form__prices
+                .main-form__price.main-form__price--old
+                    .main-form__price-text Старая цена
+                    .main-form__price-wrap
+                      span.main-form__num.x_price_previous 1980
+                      span.main-form__currency.x_currency  руб.
+                .main-form__price.main-form__price--new
+                    .main-form__price-text Новая цена
+                    .main-form__price-wrap
+                      span.main-form__num.x_price_current 990
+                      span.main-form__currency.x_currency  руб.
+              .main-form__container
+                .main-form__field.main-form__field--name.input-wrap.input-wrap--name
+                    input.main-form__input.input.input--form(type="text" name="name" placeholder="Моё имя" required)
+                .main-form__field.input-wrap.main-form__field--phone.input-wrap--phone
+                    input.main-form__input.input.input--form(type="tel" name="phone" placeholder="Мой телефон" required)
+                .main-form__btn-wrap
+                    button.main-form__btn.btn.btn--form Заказать
+                      span.smaller со скидкой
+              span.main-form__note *при оформлении заказа
+            .main-form__packs Внимание! Осталось
+              span.colored-text.colored-text-lg.lastpack  80
+              |  упаковок

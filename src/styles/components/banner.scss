@@ -37,10 +37,11 @@
   }
 
   &__img {
-    top: -30px;
+    top: -4px;
     left: 0;
     position: absolute;
     margin-right: 8px;
+    max-width: 107px;
 
     @include r(1219) {
       position: static;
@@ -68,7 +69,7 @@
       left: 0;
       width: 88px;
       height: 67px;
-      background-image: url("../img/sale.png");
+      background-image: url("../img/main-discount.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 50% 50%;
@@ -121,6 +122,7 @@
 
   &__order {
     margin-right: 24px;
+    margin-left: 30px;
 
     @include r(1219) {
       margin-right: 10px;
@@ -148,16 +150,17 @@
   }
 
   .timer {
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     margin-right: 20px;
-    text-align: center;
+    text-align: left;
 
     &__title {
-      margin-right: 0;
-      margin-bottom: 5px;
+      margin-right: 20px;
+      // margin-bottom: 5px;
       font-size: 14px;
       line-height: 1.13;
+      max-width: 110px;
 
       br {
         display: none;

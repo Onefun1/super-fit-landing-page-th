@@ -1,0 +1,153 @@
+.causes {
+  padding: 80px 0 75px 0;
+  background-color: #f2f4f5;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include r(767) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    display: flex;
+    flex: 1 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 55px;
+
+    @include r(1023) {
+      margin: 0 auto 30px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 600px;
+    }
+    @include r(639) {
+      margin: 0 auto 20px;
+    }
+  }
+  .item {
+    position: relative;
+    padding-top: 40px;
+
+    @include r(1023) {
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+      // margin-right: 70px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+
+    &::before {
+      width: 30px;
+      height: 23px;
+      border: 3px solid #c33246;
+      border-top: none;
+      border-right: none;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+    }
+
+    &:not(:last-child)::after {
+      top: 12px;
+      right: -115px;
+      width: 170px;
+      height: 1px;
+      background-color: #d5d5d5;
+
+      @include r(1219) {
+        right: -85px;
+      }
+      @include r(1023) {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: #000000;
+      margin-bottom: 17px;
+    }
+
+    &__text {
+      width: 258px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.44;
+      color: #444444;
+      @include r(639) {
+        width: auto;
+      }
+    }
+  }
+
+  &__picture {
+    position: relative;
+    max-width: 766px;
+    margin: 0 auto 83px;
+    @include r(767) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__picture-img {
+    position: relative;
+    left: -8px;
+    top: -2px;
+
+    @include r(1023) {
+      left: auto;
+      top: auto;
+    }
+  }
+
+  &-picture-info {
+    position: absolute;
+    bottom: -2px;
+    left: -8px;
+    max-width: 230px;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.33;
+    text-align: left;
+    color: #000000;
+
+    @include r(1023) {
+      bottom: 0;
+      left: 0;
+    }
+
+    @include r(767) {
+      font-size: 15px;
+      max-width: 195px;
+    }
+    @include r(639) {
+      bottom: -22px;
+      max-width: 195px;
+    }
+    @include r(479) {
+      display: none;
+    }
+  }
+
+  &__conclusion {
+    text-align: center;
+    max-width: 790px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #444444;
+    margin: 0 auto;
+  }
+}

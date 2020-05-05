@@ -1,0 +1,71 @@
+.ever-popup__close:after,
+.ever-popup__close:before {
+  height: 4px !important;
+  border-radius: 10px;
+}
+
+.colored-text {
+  color: #e8c652;
+}
+
+.colored-text-lg {
+  font-size: 1.2rem;
+}
+
+.my-popup {
+  &__wrap {
+    padding: 50px 62px;
+    display: flex;
+    width: 768px;
+    height: 541px;
+    background-color: #08324d;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #ffffff;
+
+    @include r(1023) {
+      height: auto;
+      width: auto;
+      background: none;
+      padding: 0px;
+      display: block;
+    }
+  }
+
+  .main-form {
+    width: 270px !important;
+  }
+
+  .form-sale {
+    left: auto;
+    right: -45px;
+    top: -46px;
+    @include r(1023) {
+      display: none;
+    }
+  }
+
+  .main-form__packs {
+    @include r(1023) {
+      display: none;
+    }
+  }
+
+  &__product {
+    position: relative;
+    right: 32px;
+    width: 436px;
+    top: 22px;
+
+    @include r(1023) {
+      display: none;
+    }
+  }
+  &__right {
+    margin-top: 51px;
+    @include r(1023) {
+      margin-top: 0;
+    }
+  }
+}
