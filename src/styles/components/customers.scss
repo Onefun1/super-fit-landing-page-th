@@ -1,0 +1,98 @@
+.customers {
+  padding: 82px 0 75px 0;
+  background-color: #08324d;
+
+  &__container {
+    @include r(1219) {
+      width: 805px;
+    }
+
+    @include r(810) {
+      width: 418px;
+    }
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    path {
+      fill: #4c80a2;
+    }
+    &:hover {
+      path {
+        fill: #e8c853;
+      }
+    }
+
+    @include r(1023) {
+      top: auto;
+      bottom: -78px;
+    }
+  }
+
+  &__arrow-left {
+    left: -30px;
+    @include r(1023) {
+      left: 280px;
+    }
+    @include r(810) {
+      left: 60px;
+      display: none;
+    }
+  }
+  &__arrow-right {
+    transform: translateY(-50%) rotate(180deg);
+    right: -30px;
+    @include r(1023) {
+      right: 280px;
+    }
+    @include r(810) {
+      right: 60px;
+      display: none;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    // width: 370px;
+    height: 630px;
+    margin: 0 15px;
+    @include r(1219) {
+      // margin: 0;
+    }
+  }
+
+  &__btn {
+    margin: 80px auto 0;
+    max-width: 320px;
+    padding: 5px 40px 8px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 900;
+
+    .smaller {
+      font-size: 21px;
+      line-height: 20px;
+      font-weight: normal;
+    }
+  }
+
+  // dots
+
+  .slick-dots li {
+    background-color: #cfd2d4;
+  }
+  .slick-dots li.slick-active {
+    background-color: #e8c853;
+  }
+}

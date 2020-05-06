@@ -1,0 +1,34 @@
+mixin customer(customer)
+  li.customers__item
+    .customers__photo
+      img.customer__img(src=customer.src, alt="photo")
+
+-
+  const customersArray = [
+    {
+      src: 'img/customers__img1.png',
+    },
+    {
+      src: 'img/customers__img2.png',
+    },
+    {
+      src: 'img/customers__img3.png',
+    },
+    {
+      src: 'img/customers__img11.png',
+    }
+  ];
+
+
+
+
+
+section.block.customers
+  .container.customers__container
+    .title.customers__title Отзывы реальных покупателей
+    .customers__content
+      ul.customers__list.customers__slider
+        each customer in customersArray
+          +customer(customer)
+    .btn.customers__btn Заказать SuperFit
+      span.smaller со скидкой

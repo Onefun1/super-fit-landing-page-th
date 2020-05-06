@@ -1,0 +1,133 @@
+.composition {
+  padding: 102px 0 75px 0;
+  background-color: #ffffff;
+  counter-reset: list;
+
+  &__container {
+    position: relative;
+  }
+  &__product {
+    position: absolute;
+    max-width: 371px;
+    left: 432px;
+    bottom: -95px;
+    @include r(1219) {
+      max-width: 275px;
+      bottom: 0;
+      left: 378px;
+    }
+    @include r(1023) {
+      display: none;
+    }
+  }
+
+  .product-img-stick {
+    position: absolute;
+    top: 98px;
+    left: -11px;
+    @include r(1219) {
+      top: 76px;
+      left: -11px;
+      max-width: 110px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18px;
+    flex: 0 0;
+    @include r(1219) {
+      padding: 0 0;
+    }
+    @include r(1023) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item:nth-child(odd) {
+    margin-top: 189px;
+    @include r(1023) {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include r(1023) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .item {
+    position: relative;
+
+    &-center::after {
+      position: absolute;
+      content: "";
+      width: 528px;
+      height: 83px;
+      background: url(../img/composition__dots.png) no-repeat center;
+      top: 87px;
+      @include r(1023) {
+        display: none;
+      }
+    }
+
+    &::before {
+      counter-increment: list;
+      position: absolute;
+      content: counter(list);
+      top: 41px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e8c652;
+      text-align: center;
+      line-height: 50px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    &__title {
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 0.96;
+      margin-bottom: 37px;
+      @include r(1219) {
+        font-size: 21px;
+      }
+      @include r(1023) {
+        text-align: center;
+      }
+      @include r(479) {
+        font-size: 20px;
+      }
+    }
+    &__img-container {
+      margin-bottom: 17px;
+    }
+    &__text {
+      font-size: 17px;
+
+      font-style: italic;
+      line-height: 1.41;
+      text-align: center;
+      color: #666666;
+      max-width: 350px;
+      @include r(1023) {
+        font-size: 16px;
+      }
+    }
+  }
+}
