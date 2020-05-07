@@ -19,10 +19,13 @@
     width: 768px;
     height: 541px;
     background-color: #08324d;
+    background-image: url(../img/Layer7.png);
+    background-repeat: no-repeat;
+    background-position: left -165px center, center;
     justify-content: flex-end;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 0 3px #ffffff;
+    box-shadow: 0 0 9px #08324d;
 
     @include r(1023) {
       height: auto;

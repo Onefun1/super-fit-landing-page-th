@@ -8,7 +8,7 @@ import customers from "./modules/customers.js";
 function main() {
   scrollSmooth();
   nav();
-  // banner();
+  banner();
   reviews();
   customers();
 }

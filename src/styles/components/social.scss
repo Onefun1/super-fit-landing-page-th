@@ -1,0 +1,116 @@
+.social {
+  padding: 99px 0 100px 0;
+
+  &__content {
+    max-width: 1170px;
+    border: solid 1px #dcdcdc;
+  }
+
+  .content {
+    &__title {
+      position: relative;
+      font-size: 22px;
+      line-height: 1.09;
+      text-align: left;
+      color: #ffffff;
+      background-color: #3e5398;
+      padding: 25px 25px 22px 80px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 35px;
+        left: 30px;
+        top: calc(50% - 17.5px);
+        background-image: url(../img/social__facebook.png);
+      }
+    }
+
+    &__container {
+      padding: 30px 81px 8px;
+      @include r(1023) {
+        padding: 30px 24px 8px;
+      }
+    }
+  }
+
+  .comment {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 20px;
+
+    @include r(479) {
+      padding-left: 37px;
+    }
+
+    &__photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include r(479) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__name {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.41;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 15px;
+      line-height: 1.47;
+      color: #666666;
+      margin-bottom: 5px;
+    }
+    &__bottom {
+      font-size: 13px;
+      line-height: 2;
+      text-align: left;
+      color: #777777;
+      display: flex;
+      @include r(1023) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .bottom {
+      &__time {
+        padding-right: 15px;
+      }
+      &__like {
+        padding-left: 15px;
+        position: relative;
+
+        a {
+          color: #08324d;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 15px;
+          left: 0;
+          top: calc(50% - 7px);
+          background-color: #dcdcdc;
+        }
+
+        @include r(639) {
+          &:before {
+            display: none;
+          }
+          padding: 0;
+        }
+      }
+    }
+  }
+}

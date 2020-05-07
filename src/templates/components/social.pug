@@ -1,0 +1,55 @@
+
+mixin comment(comment)
+  li.list__item.comment
+    .comment__photo
+      img.comment__img(src=comment.src, alt="photo")
+    .comment__info
+      p.comment__name!=comment.name
+      p.comment__text!=comment.text
+      .comment__bottom.bottom
+        .bottom__time!=comment.time
+        .bottom__like
+          a(href="")!=comment.like
+
+-
+  const commentArray = [
+    {
+      src: 'img/social__foto1.png',
+      name: 'Kelly Conney',
+      text: 'You MUST have PATIENCE...I have taken this product and lost 11 pounds! This product is great and it works quite well... THEN drink LOTS OF WATER, so it can flush out your system. Keep taking for at least a couple months. I started late November and by the end of February I had lost the weight! Exercise is a must, whether it be walking or jumping! ;)',
+      time: '<span class="date-0" data-format="dd month yyyy">07 พฤษภาคม 2563</span>, 12:14pm',
+      like: '3 Like(s) | 2 Comment(s)'
+    },
+    {
+      src: 'img/social__foto2.png',
+      name: 'Wai Mei',
+      text: 'Ok! I think it does aid weight loss. Aid if you add with healthy diet etc. I have finished a full set pack and about to order my second. Lost 3.8kg\'s by healthy eating, ag factor and superfit only. Will add exercise now for better result. Not sure is it coz of superfit, but my cholesterol has been lower too. Will be ordering my second and keen to try another of your supplement too',
+      time: '<span class="date-1" data-format="dd month yyyy">07 พฤษภาคม 2563</span>, 3:20pm',
+      like: '1 Like(s) | 1 Comment(s)'
+    },
+    {
+      src: 'img/social__foto3.png',
+      name: 'Pei Shan',
+      text: 'Hi team! Received Superfit, Ag and Cera yesterday.. Love the super packaging and it’s so convenient! Taste are great too.. Will keep you guys update in maybe 1 or 2 months time **wish me luck**',
+      time: '<span class="date-1" data-format="dd month yyyy">07 พฤษภาคม 2563</span>, 3:20pm',
+      like: '1 Like(s) | 1 Comment(s)'
+    },
+    {
+      src: 'img/social__foto4.png',
+      name: 'Jolly Ming Fong',
+      text: 'Hi… I have just made payment for 2 months supply! Possible to received before 14th Jan? Coz I’ll be going back to hometown on 15th morning. Sorry for the last min but seriously, your product is good! I’ve lost 1.5kg within just half month and no feeling uncomfortable at all. :D',
+      time: '<span class="date-2" data-format="dd month yyyy">07 พฤษภาคม 2563</span>, 3:14pm',
+      like: '1 Like(s) | 1 Comment(s)'
+    }
+  ]
+
+
+.block.social
+  .container.social__container
+    .social__content.content
+      h2.content__title Customer Reviews from Facebook
+      .content__container
+        ul.content__list
+          each comment in commentArray
+            +comment(comment)
+

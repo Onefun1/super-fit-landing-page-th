@@ -43,6 +43,10 @@ export default () => {
   });
   $(".js-show-comment").on("click", function () {
     let targetButton = this;
+    let slideDesc = targetButton.parentElement.querySelector(".slide__desc");
+
+    // console.log(slideDesc);
+    // slideDesc.addClass("mCustomScrollbar");
 
     targetButton.parentElement.classList.toggle("text-open");
 

@@ -1,0 +1,186 @@
+.choice {
+  padding: 110px 0 5px 0;
+  background-color: #f2f4f5;
+  background-image: url(../img/choice__leaf.png);
+  background-repeat: no-repeat;
+  background-position: left 77px top -241px, center center;
+  overflow: hidden;
+
+  @include r(1219) {
+    background-position: left -238px top -241px, center center;
+  }
+  @include r(1023) {
+    background-position: left -622px top -241px, center center;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    @include r(639) {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    max-width: 275px;
+    position: absolute;
+    left: 26px;
+    top: -28px;
+    color: #ffffff;
+
+    @include r(767) {
+      left: 5px;
+      top: -13px;
+    }
+    @include r(639) {
+      display: block;
+      position: static;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    max-width: 380px;
+
+    @include r(479) {
+      width: 100%;
+    }
+  }
+
+  .product {
+    position: absolute;
+    top: -21px;
+    left: 408px;
+    z-index: 5;
+
+    @include r(1219) {
+      left: 270px;
+    }
+
+    @include r(1023) {
+      left: 92px;
+      top: 73px;
+    }
+
+    @include r(767) {
+      left: 42px;
+    }
+
+    @include r(639) {
+      position: relative;
+      top: auto;
+      left: 40px;
+    }
+
+    &__img {
+      &-box {
+        width: 415px;
+        @include r(1023) {
+          width: 250px;
+        }
+      }
+      &-stick {
+        width: 156px;
+        position: absolute;
+        top: 122px;
+        left: -76px;
+        z-index: -1;
+        @include r(1023) {
+          width: 90px;
+          top: 85px;
+          left: -38px;
+          z-index: 0;
+        }
+
+        @include r(639) {
+          top: 87px;
+          left: -31px;
+        }
+      }
+    }
+  }
+
+  .item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 39px;
+
+    @include r(1023) {
+      margin-bottom: 24px;
+    }
+    @include r(479) {
+      padding-left: 40px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 22px;
+      left: -70px;
+      width: 69px;
+      height: 1px;
+      opacity: 0.1;
+      background-color: #000;
+      @include r(1219) {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 42px;
+      color: #000000;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 1.41;
+      color: #666666;
+
+      @include r(767) {
+        color: #000000;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 45px;
+      height: 45px;
+
+      background-color: #ffffff;
+      border-radius: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      @include r(479) {
+        width: 30px;
+        height: 30px;
+        background-size: 60%;
+        left: 0px;
+        top: 6px;
+      }
+
+      &-first {
+        background-image: url(../img/choice__half-sun.png);
+        background-position: center top 10px;
+        @include r(479) {
+          background-position: center top 9px;
+        }
+      }
+      &-second {
+        background-image: url(../img/choice__sun.png);
+      }
+      &-third {
+        background-image: url(../img/choice__moon.png);
+      }
+    }
+  }
+}

@@ -4,12 +4,10 @@
 }
 
 .text-open {
-  .slide__desc {
-    overflow-y: scroll;
-  }
-  .slide__text-more {
-    height: auto !important;
-  }
+  height: 620px !important;
+  // .slide__text-more {
+  //   height: auto !important;
+  // }
 }
 
 // slick dots styles
@@ -80,6 +78,7 @@
   }
 
   .slide {
+    position: relative;
     width: 370px;
     height: 563px;
     border-radius: 3px;
@@ -93,10 +92,9 @@
     flex: 0 0;
     flex-direction: column;
     justify-content: flex-start;
-
-    // @include r(768) {
-    //   max-width: 260px;
-    // }
+    padding-bottom: 40px;
+    overflow: hidden;
+    transition: height 0.5s;
 
     &__photo {
       position: relative;
@@ -105,7 +103,8 @@
       margin-bottom: 17px;
       overflow: hidden;
       flex-shrink: 0;
-      img {
+      z-index: 10;
+      img.slide__img {
         width: 100%;
         min-height: 100%;
       }
@@ -123,6 +122,15 @@
         line-height: 34px;
         color: #ffffff;
         text-transform: uppercase;
+        z-index: 5;
+      }
+
+      .product-mini {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9;
       }
 
       // @include r(1219) {
@@ -154,7 +162,7 @@
     }
 
     &__desc {
-      overflow-y: scroll;
+      overflow: hidden;
     }
 
     &__btn {
@@ -179,6 +187,9 @@
     }
 
     &__btn {
+      position: absolute;
+      left: 0;
+      bottom: 15px;
       font-size: 13px;
       line-height: 2;
       color: #08324d;

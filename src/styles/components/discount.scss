@@ -1,0 +1,151 @@
+.discount {
+  padding: 83px 0 95px 0;
+  background-color: #f2f4f5;
+  background-image: url(../img/discount-img.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left 180px, center;
+
+  &__container {
+    position: relative;
+  }
+
+  &__product {
+    position: absolute;
+    top: 16px;
+    left: -141px;
+    transform: rotate(-30deg);
+    img {
+      width: 180px;
+    }
+
+    @include r(1023) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    padding: 18px 64px 19px;
+    font-size: 30px;
+    line-height: 22px;
+    max-width: none;
+    text-align: center;
+    max-width: 424px;
+    box-shadow: 0 4px 0 #9c1e2f;
+    margin: 0 auto;
+
+    @include r(479) {
+      padding: 18px 20px 19px;
+      font-size: 26px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+    @include r(639) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .timer {
+    margin-bottom: 80px;
+
+    @include r(479) {
+      margin-bottom: 50px;
+    }
+
+    &__container {
+      margin: 0 auto;
+    }
+
+    &__box {
+      position: relative;
+      background-color: #ed3833;
+      border-radius: 5px;
+      width: 160px;
+
+      &-h::before,
+      &-m::before,
+      &-s::before {
+        position: absolute;
+        bottom: -36px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        line-height: 0.86;
+        color: #222222;
+
+        @include r(479) {
+          font-size: 18px;
+          bottom: -25px;
+        }
+      }
+
+      &-h::before {
+        content: "час";
+      }
+      &-m::before {
+        content: "минута";
+      }
+      &-s::before {
+        content: "сек.";
+      }
+
+      @include r(767) {
+        width: 100px;
+      }
+      @include r(479) {
+        width: 65px;
+      }
+    }
+
+    &__item {
+      width: 80px;
+      height: 170px;
+      border: none;
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+      &-decr-margin {
+        margin-right: -25px;
+      }
+
+      @include r(767) {
+        font-size: 70px;
+        width: 40px;
+        height: 85px;
+
+        &-decr-margin {
+          margin-right: 0px;
+        }
+      }
+
+      @include r(479) {
+        font-size: 35px;
+        width: 30px;
+        height: 65px;
+      }
+    }
+
+    &__separator {
+      font-size: 60px;
+      color: #000000;
+      margin-right: 40px;
+      margin-left: 40px;
+
+      @include r(767) {
+        margin-right: 15px;
+        margin-left: 15px;
+        font-size: 50px;
+      }
+      @include r(767) {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+}
