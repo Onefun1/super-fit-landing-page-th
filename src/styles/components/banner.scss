@@ -7,9 +7,13 @@
   padding: 12px 0;
   background-color: #01263d;
 
+  // @include r(639) {
+  //   display: none !important;
+  // }
+
   &__info {
     color: white;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 26px;
 
     span {
@@ -21,6 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include r(639) {
+      justify-content: center;
+    }
   }
 
   &__left {
@@ -77,6 +85,7 @@
 
     @include r(1219) {
       width: 67px;
+      left: -30px;
 
       &::before {
         width: 67px;
@@ -108,7 +117,12 @@
 
   &__sale-text {
     position: relative;
+    font-size: 20px;
     z-index: 1;
+
+    @include r(1219) {
+      left: 6px;
+    }
     transform: rotate(-45deg);
 
     @include r(1023) {
@@ -134,19 +148,19 @@
     font-size: 20px;
 
     @include r(1219) {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
-    @include r(767) {
-      padding-right: 40px;
-      padding-left: 40px;
-    }
+    // @include r(767) {
+    //   padding-right: 40px;
+    //   padding-left: 40px;
+    // }
 
-    @include r(370) {
-      padding-right: 30px;
-      padding-left: 30px;
-    }
+    // @include r(370) {
+    //   padding-right: 30px;
+    //   padding-left: 30px;
+    // }
   }
 
   .timer {
@@ -160,7 +174,7 @@
       // margin-bottom: 5px;
       font-size: 14px;
       line-height: 1.13;
-      max-width: 110px;
+      max-width: 125px;
 
       br {
         display: none;
@@ -200,6 +214,12 @@
 
   @include r(1023) {
     margin-right: 0;
+  }
+
+  .banner__info {
+    @include r(639) {
+      display: none;
+    }
   }
 
   &__text {
