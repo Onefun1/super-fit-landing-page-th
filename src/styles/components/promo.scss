@@ -510,3 +510,23 @@ $main-second: #9c1e2f;
     display: none;
   }
 }
+
+// psd fixes___________________
+
+// promo-bottom__________________________________________________
+
+.promo-bottom {
+  padding: 69px 0 18px;
+
+  @include rm(1220) {
+    position: relative;
+    .promo__container {
+      left: -36px;
+    }
+    // .promo__bullets {
+    //   left: 50%;
+    // }
+  }
+}
+
+// promo bottom end _____________________________________________

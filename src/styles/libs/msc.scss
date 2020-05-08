@@ -81,7 +81,7 @@
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   position: relative;
-  width: 8px;
+  width: 5px;
   height: 100%;
   margin: 0 auto;
   border-radius: 2px;
@@ -89,7 +89,7 @@
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:after {
   content: "";
-  width: 4px;
+  width: 3px;
   height: 12px;
   background: repeating-linear-gradient(
     0deg,
@@ -101,7 +101,7 @@
   position: absolute;
   top: 50%;
   margin-top: -3.5px;
-  left: 2px;
+  left: 1px;
 }
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
   .mCSB_dragger.mCSB_dragger_onDrag_expanded
@@ -322,7 +322,7 @@
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
-  background-color: #a2a2a2;
+  background-color: #183f58;
 }
 .mCSB_scrollTools .mCSB_buttonDown,
 .mCSB_scrollTools .mCSB_buttonLeft,
