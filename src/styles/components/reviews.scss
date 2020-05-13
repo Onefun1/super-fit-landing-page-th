@@ -32,6 +32,18 @@
 .reviews {
   padding: 130px 0;
 
+  @include r(1023) {
+    padding-bottom: 90px !important;
+  }
+
+  @include r(768) {
+    padding-bottom: 40px !important;
+  }
+
+  @include r(479) {
+    padding-bottom: 30px !important;
+  }
+
   .reviews__container {
     @include r(768) {
       width: 480px;
@@ -62,7 +74,18 @@
     cursor: pointer;
 
     &:hover {
-      background: #0f537d url(../img/slider-arrow.png) no-repeat center;
+      background: rgba(#0f537d, 0.6) url(../img/slider-arrow.png) no-repeat
+        center;
+    }
+
+    @include r(479) {
+      width: 31px;
+      height: 35px;
+      top: 181px;
+      border-radius: 0px;
+      background: rgba(#debd51, 0.6) url(../img/slider-arrow.png) no-repeat
+        center;
+      opacity: 1;
     }
   }
 

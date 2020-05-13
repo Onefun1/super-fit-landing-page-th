@@ -1,9 +1,10 @@
 .discount {
   padding: 83px 0 95px 0;
   background-color: #f2f4f5;
-  background-image: url(../img/discount-img.png);
+  background-image: url(../img/discount-bg.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: top left 180px, center;
+  background-position: top -15px left 0px, center;
+  background-size: contain, auto;
 
   &__container {
     position: relative;

@@ -20,7 +20,7 @@ export default () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           dots: false,
           slidesToShow: 1,
@@ -40,7 +40,13 @@ export default () => {
       .find(".slick-slide.text-open")
       .not(".slick-active")
       .removeClass("text-open");
+    console.log($(this).find(".reviews__item"));
+
+    $(this).find(".js-show-comment").text("Подробнее");
+
+    $(".reviews__item").removeClass("text-open");
   });
+
   $(".js-show-comment").on("click", function () {
     let targetButton = this;
     let slideDesc = targetButton.parentElement.querySelector(".slide__desc");
@@ -59,4 +65,9 @@ export default () => {
     // $(".slide__text-more").find(".slick-slide.slick-active").height("auto");
     // $(".slide__text-more").find(".slick-list").height("auto");
   });
+
+  // $(".slick-arrow").on("click", function () {
+  //   $(".reviews__item").removeClass("text-open");
+  //   $(".slide__btn").innerText = "Подробнее";
+  // });
 };

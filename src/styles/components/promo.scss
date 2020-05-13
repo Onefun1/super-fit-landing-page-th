@@ -3,6 +3,10 @@
   background-image: url(../img/Layer7.png);
   background-repeat: no-repeat;
   background-position: center;
+
+  @include r(639) {
+    background-image: none;
+  }
 }
 
 .promo {
@@ -116,7 +120,8 @@
     color: #ffffff;
     max-width: 275px;
     box-sizing: border-box;
-    margin-right: 134px;
+    // margin-right: 134px;
+    margin-right: 105px;
     margin-bottom: 31px;
 
     :nth-child(2) {
@@ -162,6 +167,16 @@
         line-height: 0.26;
         text-align: center;
         color: rgba(255, 255, 255, 0.09);
+
+        @include r(1023) {
+          top: 17px;
+          left: -6%;
+          font-size: 40px;
+        }
+
+        @include r(800) {
+          display: none;
+        }
       }
 
       @include r(1023) {
@@ -520,9 +535,9 @@ $main-second: #9c1e2f;
 
   @include rm(1220) {
     position: relative;
-    .promo__container {
-      left: -36px;
-    }
+    // .promo__container {
+    //   left: -36px;
+    // }
     // .promo__bullets {
     //   left: 50%;
     // }

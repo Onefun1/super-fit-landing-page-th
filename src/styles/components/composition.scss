@@ -1,7 +1,11 @@
 .composition {
-  padding: 102px 0 258px 0;
+  padding: 102px 0 180px 0;
   background-color: #ffffff;
   counter-reset: list;
+
+  @include r(1219) {
+    padding-bottom: 90px;
+  }
 
   &__container {
     position: relative;
@@ -9,7 +13,8 @@
   &__product {
     position: absolute;
     max-width: 371px;
-    left: 432px;
+    // left: 432px;
+    left: 400px;
     bottom: -95px;
     @include r(1219) {
       max-width: 275px;
@@ -35,6 +40,10 @@
   &__title {
     text-align: center;
     margin-bottom: 50px;
+
+    @include r(768) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {

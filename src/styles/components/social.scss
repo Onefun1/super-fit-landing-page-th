@@ -13,7 +13,7 @@
       line-height: 1.09;
       text-align: left;
       color: #ffffff;
-      background-color: #3e5398;
+      background-color: #4267b2;
       padding: 25px 25px 22px 80px;
 
       &::before {
@@ -33,6 +33,10 @@
         padding: 30px 24px 8px;
       }
     }
+
+    &__list {
+      height: 470px;
+    }
   }
 
   .comment {
@@ -42,6 +46,28 @@
 
     @include r(479) {
       padding-left: 37px;
+    }
+
+    &__info-wrapp {
+      position: relative;
+      border-radius: 20px;
+      background-color: #eff0f3;
+      padding: 13px 80px 13px 15px;
+      margin-right: 3px;
+    }
+
+    &__pic {
+      position: absolute;
+      bottom: -17px;
+      right: -6px;
+    }
+
+    &__count {
+      position: absolute;
+      bottom: -8px;
+      right: 7px;
+      color: #aaa;
+      font-size: 14px;
     }
 
     &__photo {
@@ -62,7 +88,7 @@
       font-size: 17px;
       font-weight: 500;
       line-height: 1.41;
-      color: #000000;
+      color: #486da9;
       margin-bottom: 10px;
     }
     &__text {
@@ -90,18 +116,8 @@
         padding-left: 15px;
         position: relative;
 
-        a {
-          color: #08324d;
-        }
-
-        &:before {
-          position: absolute;
-          content: "";
-          width: 1px;
-          height: 15px;
-          left: 0;
-          top: calc(50% - 7px);
-          background-color: #dcdcdc;
+        span {
+          color: #486da9;
         }
 
         @include r(639) {
