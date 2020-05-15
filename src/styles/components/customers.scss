@@ -1,6 +1,7 @@
 .customers {
   padding: 82px 0 75px 0;
   background-color: #08324d;
+  position: relative;
 
   &__container {
     @include r(1219) {
@@ -10,6 +11,12 @@
     @include r(810) {
       width: 418px;
     }
+  }
+
+  &__target {
+    position: absolute;
+    top: 15px;
+    left: 50%;
   }
 
   &__arrow-left,
@@ -43,7 +50,6 @@
     }
     @include r(810) {
       left: 60px;
-      display: none;
     }
   }
   &__arrow-right {
@@ -57,7 +63,17 @@
     }
     @include r(810) {
       right: 60px;
-      display: none;
+    }
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    @include r(1023) {
+      z-index: 10;
+    }
+
+    @include r(810) {
+      // display: none !important;
     }
   }
 
@@ -65,6 +81,10 @@
     color: #ffffff;
     text-align: center;
     margin-bottom: 50px;
+
+    @include r(768) {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -86,6 +106,10 @@
     line-height: 34px;
     font-weight: 900;
 
+    @include r(1023) {
+      font-size: 25px;
+    }
+
     .smaller {
       font-size: 21px;
       line-height: 20px;
@@ -100,5 +124,13 @@
   }
   .slick-dots li.slick-active {
     background-color: #e8c853;
+  }
+
+  // slider height
+
+  .slick-list {
+    @include r(479) {
+      max-height: 468px;
+    }
   }
 }

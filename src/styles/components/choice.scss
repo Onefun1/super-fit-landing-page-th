@@ -1,5 +1,5 @@
 .choice {
-  padding: 110px 0 5px 0;
+  padding: 95px 0 5px 0;
   background-color: #f2f4f5;
   background-image: url(../img/choice__leaf.png);
   background-repeat: no-repeat;
@@ -59,34 +59,36 @@
 
   .product {
     position: absolute;
-    top: -21px;
-    left: 408px;
+    top: 3px;
+    left: 309px;
     z-index: 5;
 
     @include r(1219) {
-      left: 270px;
+      left: 160px;
+      top: 25px;
     }
 
     @include r(1023) {
-      left: 92px;
-      top: 73px;
+      left: -66px;
+      top: 62px;
     }
 
     @include r(767) {
-      left: 42px;
+      left: -44px;
+      top: 87px;
     }
 
     @include r(639) {
       position: relative;
-      top: auto;
-      left: 40px;
+      top: -5px;
+      left: -20px;
     }
 
     &__img {
       &-box {
         width: 415px;
-        @include r(1023) {
-          width: 250px;
+        @include r(768) {
+          width: 290px;
         }
       }
       &-stick {
@@ -117,6 +119,10 @@
 
     @include r(1023) {
       margin-bottom: 24px;
+    }
+
+    @include r(768) {
+      margin-bottom: 10px;
     }
     @include r(479) {
       padding-left: 40px;

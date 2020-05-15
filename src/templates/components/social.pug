@@ -9,7 +9,7 @@ mixin comment(comment)
           span.comment__count!=comment.count
           span.comment__name!=comment.name
             | &#160;&#160;&#160;&#160;
-          span.comment__text!=comment.text
+          p.comment__text!=comment.text
       .comment__bottom.bottom
         .bottom__like
           span!=comment.like
@@ -18,13 +18,13 @@ mixin comment(comment)
 -
   const commentArray = [
     {
-      src: 'img/social__foto1.png',
+      src: 'img/social__foto1.jpg',
       name: 'Девушка',
       text: 'Наконец-то это случилось! Мне удалось похудеть! Это новость самая лучшая в мире, учитывая, что меня пригласили на свадьбу лучшей подруги. Теперь все будут завидовать мой стройной фигурке! Спасибо, SuperFit!',
       time: '1дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb3.png',
-      count: '3'
+      count: '113'
 
     },
     {
@@ -34,16 +34,16 @@ mixin comment(comment)
       time: '2дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb.png',
-      count: '5'
+      count: '65'
     },
     {
-      src: 'img/social__foto3.png',
+      src: 'img/social__foto3.jpg',
       name: 'Девушка',
       text: 'Мне пришлось немного понервничать, но в итоге я очень рада, что приобрела SuperFit. Удобно принимать, не было никакого дискомфорта. Зато мой вес теперь меня полностью устраивает.',
       time: '4дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb.png',
-      count: '3'
+      count: '87'
     },
     {
       src: 'img/social__foto4.png',
@@ -52,7 +52,7 @@ mixin comment(comment)
       time: '5дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb2.png',
-      count: '2'
+      count: '41'
     },
     {
       src: 'img/social__foto5.jpg',
@@ -61,7 +61,7 @@ mixin comment(comment)
       time: '5дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb.png',
-      count: '7'
+      count: '229'
     },
     {
       src: 'img/social__foto6.jpg',
@@ -70,7 +70,7 @@ mixin comment(comment)
       time: '6дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb.png',
-      count: '5'
+      count: '55'
     },
     {
       src: 'img/social__foto4.jpg',
@@ -79,7 +79,7 @@ mixin comment(comment)
       time: '7дн',
       like: 'Нравится&#160;&#160;&#183;&#160;&#160;Ответить&#160;&#160;&#183;&#160;&#160;',
       pic: 'img/like-fb2.png',
-      count: '8'
+      count: '69'
     },
   ]
 

@@ -4,6 +4,7 @@ import nav from "./modules/nav.js";
 import banner from "./modules/banner.js";
 import reviews from "./modules/reviews.js";
 import customers from "./modules/customers.js";
+import order from "./modules/order.js";
 
 function main() {
   scrollSmooth();
@@ -11,6 +12,7 @@ function main() {
   banner();
   reviews();
   customers();
+  order();
 }
 
 main();

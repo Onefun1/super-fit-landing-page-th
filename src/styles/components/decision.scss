@@ -3,17 +3,13 @@
   background-image: url(../img/decision__bg-left.png),
     url(../img/decision__bg-right.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: top left -200px, top right -200px;
+  background-position: top left -100px, top right -100px;
 
-  @include r(1463) {
-    background-position: top left -250px, top right -250px;
+  @include r(1639) {
+    background-position: top left -200px, top right -200px;
   }
 
   @include r(1463) {
-    background-position: top left -300px, top right -300px;
-  }
-
-  @include r(1023) {
     background-image: none;
   }
 
@@ -156,21 +152,17 @@
       position: absolute;
     }
     .content__img {
-      top: -33px;
-      left: 112px;
-      @include r(1219) {
-        top: -33px;
-        left: 59px;
-      }
+      top: 56px;
+      left: -31px;
 
       @include r(1023) {
         max-width: 250px;
-        top: 33px;
+        top: 85px;
         left: 160px;
       }
       @include r(767) {
-        left: 50px;
-        top: 10px;
+        left: 5px;
+        top: 55px;
       }
     }
     .content__img-mini {

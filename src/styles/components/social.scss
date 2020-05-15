@@ -32,6 +32,9 @@
       @include r(1023) {
         padding: 30px 24px 8px;
       }
+      @include r(639) {
+        padding: 20px 15px 8px;
+      }
     }
 
     &__list {
@@ -54,6 +57,10 @@
       background-color: #eff0f3;
       padding: 13px 80px 13px 15px;
       margin-right: 3px;
+      @include r(639) {
+        margin-bottom: 15px;
+        padding: 13px 20px 13px 15px;
+      }
     }
 
     &__pic {
@@ -64,10 +71,10 @@
 
     &__count {
       position: absolute;
-      bottom: -8px;
-      right: 7px;
+      bottom: -6px;
+      right: 3px;
       color: #aaa;
-      font-size: 14px;
+      font-size: 10px;
     }
 
     &__photo {

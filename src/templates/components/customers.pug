@@ -6,16 +6,24 @@ mixin customer(customer)
 -
   const customersArray = [
     {
-      src: 'img/customers__img1.png',
+      src: 'img/customers__img1.jpg',
     },
     {
-      src: 'img/customers__img2.png',
+      src: 'img/customers__img2.jpg',
     },
     {
-      src: 'img/customers__img3.png',
+      src: 'img/customers__img3.jpg',
     },
     {
-      src: 'img/customers__img11.png',
+      src: 'img/customers__img4.jpg',
+    }
+    ,
+    {
+      src: 'img/customers__img5.jpg',
+    }
+    ,
+    {
+      src: 'img/customers__img6.jpg',
     }
   ];
 
@@ -24,7 +32,8 @@ mixin customer(customer)
 
 
 section.block.customers
-  .container.customers__container#rev
+  .customers__target#rev
+  .container.customers__container
     .title.customers__title Отзывы реальных покупателей
     .customers__content
       ul.customers__list.customers__slider

@@ -87,6 +87,7 @@
       height: 83px;
       background: url(../img/composition__dots.png) no-repeat center;
       top: 87px;
+      left: -100px;
       @include r(1023) {
         display: none;
       }
@@ -136,6 +137,16 @@
       max-width: 350px;
       @include r(1023) {
         font-size: 16px;
+      }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .composition {
+    .item {
+      &-center::after {
+        left: -80px;
       }
     }
   }
