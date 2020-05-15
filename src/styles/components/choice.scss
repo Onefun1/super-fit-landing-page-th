@@ -6,9 +6,13 @@
   background-position: left 77px top -241px, center center;
   overflow: hidden;
 
-  @include r(1219) {
-    background-position: left -238px top -241px, center center;
+  @include r(1724) {
+    background-position: left -320px top -241px, center center;
   }
+
+  // @include r(1219) {
+  //   background-position: left -238px top -241px, center center;
+  // }
   @include r(1023) {
     background-position: left -622px top -241px, center center;
   }
@@ -142,6 +146,10 @@
       font-size: 17px;
       line-height: 1.41;
       color: #666666;
+
+      // @include rm(1650) {
+      //   text-shadow: 1px 0 0 #000;
+      // }
 
       @include r(767) {
         color: #000000;

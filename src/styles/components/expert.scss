@@ -50,6 +50,7 @@
     padding-right: 20px;
     @include r(1219) {
       max-width: 545px;
+      height: 286px;
     }
     @include r(1023) {
       max-width: 100%;

@@ -22,7 +22,7 @@ export default () => {
       {
         breakpoint: 769,
         settings: {
-          dots: false,
+          dots: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: false,
@@ -40,8 +40,6 @@ export default () => {
       .find(".slick-slide.text-open")
       .not(".slick-active")
       .removeClass("text-open");
-    console.log($(this).find(".reviews__item"));
-
     $(this).find(".js-show-comment").text("Подробнее");
 
     $(".reviews__item").removeClass("text-open");
