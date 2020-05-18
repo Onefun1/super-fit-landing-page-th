@@ -1,4 +1,16 @@
 export default () => {
+  // Firefox 1.0+
+  let isFirefox = typeof InstallTrigger !== "undefined";
+  console.log("revirew", isFirefox);
+
+  if (isFirefox) {
+    let reviewsItemList = document.querySelectorAll(".reviews__item");
+
+    for (let i = 0; i < reviewsItemList.length; i++) {
+      reviewsItemList[i].classList.add("moz-fix");
+    }
+  }
+
   $(".slider__container").slick({
     dots: true,
     infinite: true,
@@ -41,22 +53,22 @@ export default () => {
       .not(".slick-active")
       .removeClass("text-open");
     $(this).find(".js-show-comment").text("Подробнее");
-
+    $(".reviews").find(".slick-list").removeClass("slick-list-rise-height");
     $(".reviews__item").removeClass("text-open");
   });
 
   $(".js-show-comment").on("click", function () {
     let targetButton = this;
     let slideDesc = targetButton.parentElement.querySelector(".slide__desc");
-
-    // console.log(slideDesc);
-    // slideDesc.addClass("mCustomScrollbar");
+    let slickList = $(".reviews").find(".slick-list");
 
     targetButton.parentElement.classList.toggle("text-open");
 
     if (targetButton.parentElement.classList.contains("text-open")) {
+      slickList.addClass("slick-list-rise-height");
       targetButton.innerText = "Вернуть";
     } else {
+      slickList.removeClass("slick-list-rise-height");
       targetButton.innerText = "Подробнее";
     }
 

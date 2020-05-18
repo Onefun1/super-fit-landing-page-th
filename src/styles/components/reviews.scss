@@ -1,15 +1,3 @@
-.slide__text-more {
-  height: 0;
-  overflow: hidden;
-}
-
-.text-open {
-  height: 620px !important;
-  // .slide__text-more {
-  //   height: auto !important;
-  // }
-}
-
 // slick dots styles
 
 .slick-dots li {
@@ -197,9 +185,10 @@
 
     &__title {
       font-weight: 500;
-      line-height: 1.41;
+      line-height: 25px;
       font-weight: 700;
-      margin-bottom: 15px;
+      font-size: 17px;
+      margin-bottom: 12px;
     }
 
     &__desc {
@@ -210,7 +199,8 @@
     &__info,
     &__text,
     &__btn,
-    &__text-more {
+    &__text-more,
+    &__title {
       padding: 0 25px;
     }
 
@@ -241,14 +231,25 @@
 
 // click event.........js ( added class text-open )
 
-@include r(769) {
-  .reviews {
+.reviews {
+  @include r(769) {
     .slick-list {
-      height: 650px !important;
+      transition: all 0.5s;
+      height: 607px !important;
+    }
+
+    .slick-list-rise-height {
+      height: 762px !important;
     }
 
     .slick-dots {
       bottom: 0px;
+    }
+  }
+
+  @include r(479) {
+    .slick-list-rise-height {
+      height: 895px !important;
     }
   }
 }
@@ -259,7 +260,23 @@
   }
 }
 
+.slide__text-more {
+  height: 0;
+  overflow: hidden;
+}
+
 .text-open {
+  @include rm(1024) {
+    height: 635px !important;
+  }
+  @include r(1023) {
+    height: 710px !important;
+  }
+
+  @include r(479) {
+    height: 850px !important;
+  }
+
   .slide__desc {
     overflow-y: scroll;
   }
@@ -280,3 +297,8 @@
 }
 
 // ......................
+
+.moz-fix {
+  box-shadow: none !important;
+  border: solid 1px #dcdcdc !important;
+}

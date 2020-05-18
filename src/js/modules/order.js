@@ -1,7 +1,6 @@
 export default () => {
   // Firefox 1.0+
   let isFirefox = typeof InstallTrigger !== "undefined";
-  console.log(isFirefox);
 
   if (isFirefox) {
     let orderItemList = document.querySelectorAll(".order__item");
