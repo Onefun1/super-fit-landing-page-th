@@ -152,10 +152,9 @@
       padding-right: 20px;
     }
 
-    // @include r(767) {
-    //   padding-right: 40px;
-    //   padding-left: 40px;
-    // }
+    @include r(479) {
+      font-size: 18px;
+    }
 
     // @include r(370) {
     //   padding-right: 30px;

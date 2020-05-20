@@ -1,5 +1,5 @@
 .choice {
-  padding: 95px 0 5px 0;
+  padding: 95px 0 39px 0;
   background-color: #f2f4f5;
   background-image: url(../img/choice__leaf.png);
   background-repeat: no-repeat;
@@ -115,7 +115,10 @@
   .item {
     position: relative;
     padding-left: 80px;
-    margin-bottom: 39px;
+
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
 
     @include r(1023) {
       margin-bottom: 24px;

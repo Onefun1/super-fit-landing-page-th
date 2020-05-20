@@ -85,7 +85,11 @@
       font-weight: 500;
       line-height: 1.3;
       color: #ffffff;
-      margin: 18px 0 31px;
+      margin: 0px 0 31px;
+    }
+
+    &__img {
+      margin-bottom: 18px;
     }
   }
   &__vs-border {

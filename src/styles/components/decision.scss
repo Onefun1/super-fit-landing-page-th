@@ -201,6 +201,17 @@
     }
   }
 
+  &__list {
+    max-width: 561px;
+    @include r(1023) {
+      max-width: 520px;
+    }
+    @include r(639) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
   .item {
     margin-bottom: 35px;
     @include r(1023) {
@@ -258,12 +269,10 @@
       font-size: 18px;
       line-height: 1.44;
       color: #444444;
-      max-width: 561px;
+      // max-width: 561px;
       @include r(1023) {
         font-size: 16px;
-        max-width: 520px;
-      }
-      @include r(1023) {
+        // max-width: 520px;
       }
     }
   }

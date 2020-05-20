@@ -250,8 +250,9 @@ $main-second: #9c1e2f;
 }
 
 .main-form {
-  padding-bottom: 12px;
-  padding-top: 15px;
+  // padding-bottom: 25px;
+  // padding-top: 15px;
+  padding: 15px 27px 25px;
   margin-bottom: 13px;
   border-radius: 5px;
   background-color: #ffffff;
@@ -306,7 +307,7 @@ $main-second: #9c1e2f;
   &__packs {
     margin-bottom: 15px;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 5px;
     color: #fff;
     font-size: 15px;
     font-weight: 400;
@@ -317,12 +318,13 @@ $main-second: #9c1e2f;
     font-weight: 700;
   }
 
-  &__container {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
+  // &__container {
+  //   padding-left: 18px;
+  //   padding-right: 18px;
+  // }
 
   &__field {
+    display: block;
     max-width: 220px;
     width: 100%;
     margin-bottom: 16px;
@@ -345,7 +347,8 @@ $main-second: #9c1e2f;
   }
 
   &__input {
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
     height: 58px;
     border-radius: 5px;
     box-shadow: inset 1.5px 2.6px 5px 0 rgba(34, 35, 39, 0.09);
@@ -358,7 +361,7 @@ $main-second: #9c1e2f;
   }
 
   &__btn-wrap {
-    margin-bottom: 13px;
+    // margin-bottom: 13px;
     text-align: center;
   }
 
@@ -382,7 +385,7 @@ $main-second: #9c1e2f;
   &__prices {
     display: flex;
     margin-bottom: 16px;
-    padding: 0 27px;
+    // padding: 0 27px;
     justify-content: space-between;
   }
 
