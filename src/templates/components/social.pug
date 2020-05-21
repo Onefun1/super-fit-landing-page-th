@@ -1,6 +1,6 @@
 
 mixin comment(comment)
-  li.list__item.comment
+  .list__item.comment
     .comment__photo
       img.comment__img(src=comment.src, alt="photo")
     .comment__info
@@ -89,7 +89,7 @@ mixin comment(comment)
     .social__content.content
       h2.content__title Customer Reviews from Facebook
       .content__container
-        ul.content__list.mCustomScrollbar
+        .content__list.mCustomScrollbar
           each comment in commentArray
             +comment(comment)
 

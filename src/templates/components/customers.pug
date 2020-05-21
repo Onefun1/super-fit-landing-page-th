@@ -1,5 +1,5 @@
 mixin customer(customer)
-  li.customers__item
+  .customers__item
     .customers__photo
       img.customer__img(src=customer.src, alt="photo")
 
@@ -34,9 +34,9 @@ mixin customer(customer)
 section.block.customers
   .customers__target#rev
   .container.customers__container
-    .title.customers__title Отзывы реальных покупателей
+    h2.title.customers__title Отзывы реальных покупателей
     .customers__content
-      ul.customers__list.customers__slider
+      .customers__list.customers__slider
         each customer in customersArray
           +customer(customer)
     .btn.customers__btn.ever-popup-btn Заказать SuperFit
