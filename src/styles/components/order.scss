@@ -108,3 +108,12 @@
     border: solid 1px #dcdcdc !important;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .order {
+    .item {
+      border: solid 1px #dcdcdc !important;
+      box-shadow: none !important;
+    }
+  }
+}

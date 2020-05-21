@@ -94,7 +94,7 @@
     height: 563px;
     border-radius: 3px;
     // border: solid 1px #dcdcdc;
-    box-shadow: 0 0 0 1px #ccc;
+    box-shadow: 0 0 0 1px #dcdcdc;
     background-color: #ffffff;
     font-size: 17px;
     line-height: 1.53;
@@ -104,7 +104,7 @@
     flex: 0 0;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     overflow: hidden;
     transition: height 0.5s;
     margin-bottom: 2px;
@@ -188,7 +188,7 @@
       line-height: 25px;
       font-weight: 700;
       font-size: 17px;
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
     }
 
     &__desc {
@@ -196,11 +196,13 @@
       overflow: hidden;
     }
 
+    &__info {
+      margin-bottom: 12px;
+    }
+
     &__info,
-    &__text,
-    &__btn,
     &__text-more,
-    &__title {
+    &__desc {
       padding: 0 25px;
     }
 
@@ -215,7 +217,7 @@
 
     &__btn {
       position: absolute;
-      left: 0;
+      left: 25px;
       bottom: 15px;
       font-size: 13px;
       line-height: 2;
@@ -276,29 +278,27 @@
   @include r(479) {
     height: 850px !important;
   }
-
-  .slide__desc {
-    overflow-y: scroll;
-  }
-
-  .slide__desc::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .slide__desc::-webkit-scrollbar-track {
-    border: 1px solid #efefef;
-    background-color: #fff;
-  }
-
-  .slide__desc::-webkit-scrollbar-thumb {
-    background-color: rgba(#0f537d, 0.6);
-    border-radius: 5px;
-  }
+  // .slide__desc {
+  //   overflow-y: scroll;
+  // }
 }
 
-// ......................
+// .....................
 
 .moz-fix {
   box-shadow: none !important;
   border: solid 1px #dcdcdc !important;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .reviews {
+    .slide {
+      border: solid 1px #dcdcdc !important;
+      box-shadow: none !important;
+    }
+
+    .slide__title {
+      height: 50px;
+    }
+  }
 }

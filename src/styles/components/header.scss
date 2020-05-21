@@ -141,11 +141,10 @@
     &--li {
       display: flex;
       align-items: center;
+      padding: 0 40px;
 
       &.second {
-        a {
-          border-left: 1px solid #d9d9d9;
-        }
+        border-left: 1px solid #d9d9d9;
       }
 
       a {
@@ -154,7 +153,6 @@
         font-size: 17px;
         color: black;
         font-weight: 400;
-        padding: 0 40px;
 
         &:hover {
           svg {
@@ -207,9 +205,8 @@
     }
     &__list {
       &--li {
+        padding: 0 15px;
         a {
-          padding: 0 15px;
-
           p {
             &.third {
               width: 120px;

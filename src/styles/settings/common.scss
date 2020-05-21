@@ -47,12 +47,11 @@ button {
 }
 
 .title {
-  font-size: 44px;
+  font-size: 56px;
   font-weight: 600;
   line-height: 1;
 
   @include rm(1220) {
-    font-size: 56px;
     line-height: 58px;
   }
 

@@ -2,11 +2,18 @@
   padding: 83px 0 95px 0;
   background-color: #f2f4f5;
   background-repeat: no-repeat, no-repeat;
-  background-position: top -15px left 0px, center;
   background-size: contain, auto;
 
-  @include rm(1870) {
+  @include rm(1219) {
     background-image: url(../img/discount-bg.png);
+    background-position: top -15px left -335px, center;
+  }
+  @include rm(1670) {
+    background-image: url(../img/discount-bg.png);
+    background-position: top -15px left -125px, center;
+  }
+  @include rm(1870) {
+    background-position: top -15px left 0px, center;
   }
 
   &__container {

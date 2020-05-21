@@ -1,7 +1,7 @@
 export default () => {
   // Firefox 1.0+
   let isFirefox = typeof InstallTrigger !== "undefined";
-  console.log("revirew", isFirefox);
+  // console.log("revirew", isFirefox);
 
   if (isFirefox) {
     let reviewsItemList = document.querySelectorAll(".reviews__item");
@@ -52,6 +52,7 @@ export default () => {
       .find(".slick-slide.text-open")
       .not(".slick-active")
       .removeClass("text-open");
+    $(this).find(".slide__desc").mCustomScrollbar("destroy");
     $(this).find(".js-show-comment").text("Подробнее");
     $(".reviews").find(".slick-list").removeClass("slick-list-rise-height");
     $(".reviews__item").removeClass("text-open");
@@ -62,12 +63,19 @@ export default () => {
     let slideDesc = targetButton.parentElement.querySelector(".slide__desc");
     let slickList = $(".reviews").find(".slick-list");
 
+    console.log($(this).prev());
+
     targetButton.parentElement.classList.toggle("text-open");
 
     if (targetButton.parentElement.classList.contains("text-open")) {
       slickList.addClass("slick-list-rise-height");
+      $(this).prev().mCustomScrollbar({
+        scrollInertia: 300,
+      });
+
       targetButton.innerText = "Вернуть";
     } else {
+      $(this).prev().mCustomScrollbar("destroy");
       slickList.removeClass("slick-list-rise-height");
       targetButton.innerText = "Подробнее";
     }

@@ -118,15 +118,15 @@
 
     &:not(:last-child) {
       margin-bottom: 39px;
+      @include r(1023) {
+        margin-bottom: 24px;
+      }
+
+      @include r(768) {
+        margin-bottom: 10px;
+      }
     }
 
-    @include r(1023) {
-      margin-bottom: 24px;
-    }
-
-    @include r(768) {
-      margin-bottom: 10px;
-    }
     @include r(479) {
       padding-left: 40px;
     }
@@ -134,7 +134,7 @@
     &::before {
       position: absolute;
       content: "";
-      top: 22px;
+      top: 24px;
       left: -336px;
       width: 330px;
       height: 1px;
@@ -143,6 +143,11 @@
       @include r(1219) {
         display: none;
       }
+    }
+
+    &:first-child::before {
+      width: 230px;
+      left: -236px;
     }
 
     &__title {
