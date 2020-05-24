@@ -42,6 +42,7 @@
     max-width: 580px;
     @include r(1023) {
       text-align: center;
+      max-width: none;
     }
   }
   &__content,
