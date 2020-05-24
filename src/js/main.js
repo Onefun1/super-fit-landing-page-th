@@ -6,6 +6,8 @@ import reviews from "./modules/reviews.js";
 import customers from "./modules/customers.js";
 import order from "./modules/order.js";
 
+document.addEventListener("DOMContentLoaded", main);
+
 function main() {
   scrollSmooth();
   nav();
@@ -14,5 +16,3 @@ function main() {
   customers();
   order();
 }
-
-main();

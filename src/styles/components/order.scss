@@ -5,6 +5,9 @@
   &__title {
     margin-bottom: 50px;
     text-align: center;
+    @include r(1023) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -30,7 +33,9 @@
     box-sizing: border-box;
 
     @include r(1023) {
-      margin-bottom: 30px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
 
     &:not(:last-child) {

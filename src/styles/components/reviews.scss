@@ -42,6 +42,9 @@
     text-align: center;
     max-width: 900px;
     margin: 0px auto 46px;
+    @include r(1023) {
+      margin-bottom: 20px;
+    }
   }
 
   .reviews__list {

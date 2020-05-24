@@ -1,7 +1,7 @@
 .program {
   padding: 81px 0 95px 0;
   background-color: #08324d;
-  background-image: url(../img/program__girl2.png);
+  background-image: url(../img/program__girl2.jpg);
   background-repeat: no-repeat;
   background-position: top right -35px;
 
@@ -11,7 +11,7 @@
         rgba(8, 50, 77, 1) 0%,
         rgba(8, 50, 77, 0.6615021008403361) 53%
       ),
-      url(../img/program__girl2.png);
+      url(../img/program__girl2.jpg);
 
     background-position: top right;
   }
@@ -21,7 +21,7 @@
         rgba(8, 50, 77, 1) 0%,
         rgba(8, 50, 77, 0.6615021008403361) 53%
       ),
-      url(../img/program__girl2.png);
+      url(../img/program__girl2.jpg);
 
     background-position: center, top right -300px;
   }
@@ -131,6 +131,10 @@
     font-size: 18px;
     line-height: 1.44;
     color: #c3cdd4;
+
+    @include r(1023) {
+      margin-top: 20px;
+    }
 
     .description__text:not(:last-child) {
       margin-bottom: 20px;
